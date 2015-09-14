@@ -18,6 +18,7 @@
 		171D62101BA76847000E3CD8 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D620F1BA76847000E3CD8 /* QuestionSearchViewController.m */; };
 		171D62131BA773F0000E3CD8 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */; };
 		171D62161BA77BB5000E3CD8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62151BA77BB5000E3CD8 /* WebViewController.m */; };
+		171D62191BA78781000E3CD8 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62181BA78781000E3CD8 /* Errors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
 		171D62141BA77BB5000E3CD8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		171D62151BA77BB5000E3CD8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		171D62171BA78781000E3CD8 /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Errors.h; sourceTree = "<group>"; };
+		171D62181BA78781000E3CD8 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Errors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 			children = (
 				171D620B1BA766D9000E3CD8 /* BurgerMenuViewController.h */,
 				171D620C1BA766D9000E3CD8 /* BurgerMenuViewController.m */,
+				171D62171BA78781000E3CD8 /* Errors.h */,
+				171D62181BA78781000E3CD8 /* Errors.m */,
 				171D62141BA77BB5000E3CD8 /* WebViewController.h */,
 				171D62151BA77BB5000E3CD8 /* WebViewController.m */,
 				171D62111BA773F0000E3CD8 /* MyQuestionsViewController.h */,
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171D62191BA78781000E3CD8 /* Errors.m in Sources */,
 				171D620D1BA766D9000E3CD8 /* BurgerMenuViewController.m in Sources */,
 				171D62161BA77BB5000E3CD8 /* WebViewController.m in Sources */,
 				171D61EE1BA766C9000E3CD8 /* ViewController.m in Sources */,
@@ -442,6 +448,7 @@
 				171D62071BA766C9000E3CD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		171D62081BA766C9000E3CD8 /* Build configuration list for PBXNativeTarget "StackOverflowClientTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +457,7 @@
 				171D620A1BA766C9000E3CD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

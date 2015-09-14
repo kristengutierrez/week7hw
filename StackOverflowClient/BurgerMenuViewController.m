@@ -10,6 +10,7 @@
 #import "QuestionSearchViewController.h"
 #import "MyQuestionsViewController.h"
 #import "WebViewController.h"
+#import "Errors.h"
 
 CGFloat const kBurgerOpenScreenMultiplier = 0.2;
 CGFloat const kBurgerOpenScreenDivider = 3.0;
