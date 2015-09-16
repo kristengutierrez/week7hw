@@ -15,10 +15,15 @@
 		171D61F61BA766C9000E3CD8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 171D61F41BA766C9000E3CD8 /* LaunchScreen.xib */; };
 		171D62021BA766C9000E3CD8 /* StackOverflowClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62011BA766C9000E3CD8 /* StackOverflowClientTests.m */; };
 		171D620D1BA766D9000E3CD8 /* BurgerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D620C1BA766D9000E3CD8 /* BurgerMenuViewController.m */; };
-		171D62101BA76847000E3CD8 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D620F1BA76847000E3CD8 /* QuestionSearchViewController.m */; };
 		171D62131BA773F0000E3CD8 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */; };
 		171D62161BA77BB5000E3CD8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62151BA77BB5000E3CD8 /* WebViewController.m */; };
 		171D62191BA78781000E3CD8 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62181BA78781000E3CD8 /* Errors.m */; };
+		1733F1B41BA8C3F50068BBF2 /* StackOverflowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */; };
+		1733F1B71BA8C9E60068BBF2 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1733F1B61BA8C9E60068BBF2 /* QuestionSearchViewController.m */; };
+		1733F1BA1BA9D5AA0068BBF2 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1733F1B91BA9D5AA0068BBF2 /* Question.m */; };
+		1733F1BD1BA9D5F40068BBF2 /* QuestionJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1733F1BC1BA9D5F40068BBF2 /* QuestionJSONParser.m */; };
+		17AD252C1BA9D88C00E2A2C1 /* Test.json in Resources */ = {isa = PBXBuildFile; fileRef = 17AD252B1BA9D88C00E2A2C1 /* Test.json */; };
+		5D382F9EA8381A2470F6EB02 /* libPods-StackOverflowClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E9BB288ECC0DBFC570D869 /* libPods-StackOverflowClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05C7D102BBD853EB16FB7823 /* Pods-StackOverflowClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-StackOverflowClient/Pods-StackOverflowClient.release.xcconfig"; sourceTree = "<group>"; };
 		171D61E21BA766C9000E3CD8 /* StackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		171D61E61BA766C9000E3CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171D61E71BA766C9000E3CD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,16 +51,25 @@
 		171D61FB1BA766C9000E3CD8 /* StackOverflowClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		171D62001BA766C9000E3CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171D62011BA766C9000E3CD8 /* StackOverflowClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackOverflowClientTests.m; sourceTree = "<group>"; };
-		171D620B1BA766D9000E3CD8 /* BurgerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerMenuViewController.h; sourceTree = "<group>"; };
-		171D620C1BA766D9000E3CD8 /* BurgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerMenuViewController.m; sourceTree = "<group>"; };
-		171D620E1BA76847000E3CD8 /* QuestionSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSearchViewController.h; sourceTree = "<group>"; };
-		171D620F1BA76847000E3CD8 /* QuestionSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchViewController.m; sourceTree = "<group>"; };
-		171D62111BA773F0000E3CD8 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
-		171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
-		171D62141BA77BB5000E3CD8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		171D62151BA77BB5000E3CD8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		171D62171BA78781000E3CD8 /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Errors.h; sourceTree = "<group>"; };
-		171D62181BA78781000E3CD8 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Errors.m; sourceTree = "<group>"; };
+		171D620B1BA766D9000E3CD8 /* BurgerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BurgerMenuViewController.h; path = ../BurgerMenuViewController.h; sourceTree = "<group>"; };
+		171D620C1BA766D9000E3CD8 /* BurgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BurgerMenuViewController.m; path = ../BurgerMenuViewController.m; sourceTree = "<group>"; };
+		171D62111BA773F0000E3CD8 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyQuestionsViewController.h; path = ../MyQuestionsViewController.h; sourceTree = "<group>"; };
+		171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyQuestionsViewController.m; path = ../MyQuestionsViewController.m; sourceTree = "<group>"; };
+		171D62141BA77BB5000E3CD8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
+		171D62151BA77BB5000E3CD8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
+		171D62171BA78781000E3CD8 /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Errors.h; path = ../Errors.h; sourceTree = "<group>"; };
+		171D62181BA78781000E3CD8 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Errors.m; path = ../Errors.m; sourceTree = "<group>"; };
+		1733F1B21BA8C3F50068BBF2 /* StackOverflowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowService.h; sourceTree = "<group>"; };
+		1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowService.m; sourceTree = "<group>"; };
+		1733F1B51BA8C9E60068BBF2 /* QuestionSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSearchViewController.h; sourceTree = "<group>"; };
+		1733F1B61BA8C9E60068BBF2 /* QuestionSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchViewController.m; sourceTree = "<group>"; };
+		1733F1B81BA9D5AA0068BBF2 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		1733F1B91BA9D5AA0068BBF2 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		1733F1BB1BA9D5F40068BBF2 /* QuestionJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionJSONParser.h; sourceTree = "<group>"; };
+		1733F1BC1BA9D5F40068BBF2 /* QuestionJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionJSONParser.m; sourceTree = "<group>"; };
+		17AD252B1BA9D88C00E2A2C1 /* Test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Test.json; path = "../../../sea-d40-iOS/Sample Code/Week7StackOverflow/StackOverflow/StackOverflow/Test.json"; sourceTree = "<group>"; };
+		49E9BB288ECC0DBFC570D869 /* libPods-StackOverflowClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StackOverflowClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AFA2096853F42527E162E46 /* Pods-StackOverflowClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StackOverflowClient/Pods-StackOverflowClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D382F9EA8381A2470F6EB02 /* libPods-StackOverflowClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,19 +94,11 @@
 		171D61D91BA766C9000E3CD8 = {
 			isa = PBXGroup;
 			children = (
-				171D620B1BA766D9000E3CD8 /* BurgerMenuViewController.h */,
-				171D620C1BA766D9000E3CD8 /* BurgerMenuViewController.m */,
-				171D62171BA78781000E3CD8 /* Errors.h */,
-				171D62181BA78781000E3CD8 /* Errors.m */,
-				171D62141BA77BB5000E3CD8 /* WebViewController.h */,
-				171D62151BA77BB5000E3CD8 /* WebViewController.m */,
-				171D62111BA773F0000E3CD8 /* MyQuestionsViewController.h */,
-				171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */,
-				171D620E1BA76847000E3CD8 /* QuestionSearchViewController.h */,
-				171D620F1BA76847000E3CD8 /* QuestionSearchViewController.m */,
 				171D61E41BA766C9000E3CD8 /* StackOverflowClient */,
 				171D61FE1BA766C9000E3CD8 /* StackOverflowClientTests */,
 				171D61E31BA766C9000E3CD8 /* Products */,
+				4664C6BE027AC8063CC83287 /* Pods */,
+				59A7142054C49D579879D31B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +114,23 @@
 		171D61E41BA766C9000E3CD8 /* StackOverflowClient */ = {
 			isa = PBXGroup;
 			children = (
+				171D620B1BA766D9000E3CD8 /* BurgerMenuViewController.h */,
+				171D620C1BA766D9000E3CD8 /* BurgerMenuViewController.m */,
+				171D62171BA78781000E3CD8 /* Errors.h */,
+				171D62181BA78781000E3CD8 /* Errors.m */,
+				17AD252B1BA9D88C00E2A2C1 /* Test.json */,
+				171D62141BA77BB5000E3CD8 /* WebViewController.h */,
+				171D62151BA77BB5000E3CD8 /* WebViewController.m */,
+				1733F1B21BA8C3F50068BBF2 /* StackOverflowService.h */,
+				1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */,
+				1733F1B81BA9D5AA0068BBF2 /* Question.h */,
+				1733F1B91BA9D5AA0068BBF2 /* Question.m */,
+				1733F1BB1BA9D5F40068BBF2 /* QuestionJSONParser.h */,
+				1733F1BC1BA9D5F40068BBF2 /* QuestionJSONParser.m */,
+				1733F1B51BA8C9E60068BBF2 /* QuestionSearchViewController.h */,
+				1733F1B61BA8C9E60068BBF2 /* QuestionSearchViewController.m */,
+				171D62111BA773F0000E3CD8 /* MyQuestionsViewController.h */,
+				171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */,
 				171D61E91BA766C9000E3CD8 /* AppDelegate.h */,
 				171D61EA1BA766C9000E3CD8 /* AppDelegate.m */,
 				171D61EC1BA766C9000E3CD8 /* ViewController.h */,
@@ -144,6 +169,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4664C6BE027AC8063CC83287 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA2096853F42527E162E46 /* Pods-StackOverflowClient.debug.xcconfig */,
+				05C7D102BBD853EB16FB7823 /* Pods-StackOverflowClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		59A7142054C49D579879D31B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49E9BB288ECC0DBFC570D869 /* libPods-StackOverflowClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 171D62051BA766C9000E3CD8 /* Build configuration list for PBXNativeTarget "StackOverflowClient" */;
 			buildPhases = (
+				A2C597AE7B21E98A85A4E8C4 /* Check Pods Manifest.lock */,
 				171D61DE1BA766C9000E3CD8 /* Sources */,
 				171D61DF1BA766C9000E3CD8 /* Frameworks */,
 				171D61E01BA766C9000E3CD8 /* Resources */,
+				7217F0A010FFF001E8ECA2B1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171D61F11BA766C9000E3CD8 /* Main.storyboard in Resources */,
+				17AD252C1BA9D88C00E2A2C1 /* Test.json in Resources */,
 				171D61F61BA766C9000E3CD8 /* LaunchScreen.xib in Resources */,
 				171D61F31BA766C9000E3CD8 /* Images.xcassets in Resources */,
 			);
@@ -239,6 +284,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7217F0A010FFF001E8ECA2B1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackOverflowClient/Pods-StackOverflowClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2C597AE7B21E98A85A4E8C4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		171D61DE1BA766C9000E3CD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -246,12 +324,15 @@
 			files = (
 				171D62191BA78781000E3CD8 /* Errors.m in Sources */,
 				171D620D1BA766D9000E3CD8 /* BurgerMenuViewController.m in Sources */,
+				1733F1BD1BA9D5F40068BBF2 /* QuestionJSONParser.m in Sources */,
 				171D62161BA77BB5000E3CD8 /* WebViewController.m in Sources */,
 				171D61EE1BA766C9000E3CD8 /* ViewController.m in Sources */,
 				171D62131BA773F0000E3CD8 /* MyQuestionsViewController.m in Sources */,
 				171D61EB1BA766C9000E3CD8 /* AppDelegate.m in Sources */,
-				171D62101BA76847000E3CD8 /* QuestionSearchViewController.m in Sources */,
 				171D61E81BA766C9000E3CD8 /* main.m in Sources */,
+				1733F1BA1BA9D5AA0068BBF2 /* Question.m in Sources */,
+				1733F1B71BA8C9E60068BBF2 /* QuestionSearchViewController.m in Sources */,
+				1733F1B41BA8C3F50068BBF2 /* StackOverflowService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +458,7 @@
 		};
 		171D62061BA766C9000E3CD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AFA2096853F42527E162E46 /* Pods-StackOverflowClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StackOverflowClient/Info.plist;
@@ -387,6 +469,7 @@
 		};
 		171D62071BA766C9000E3CD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05C7D102BBD853EB16FB7823 /* Pods-StackOverflowClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StackOverflowClient/Info.plist;

@@ -12,4 +12,8 @@ extern NSString *const kStackOverflowErrorDomain;
 typedef enum : NSUInteger {
   StackOverflowBadJSON,
   StackOverflowConnectionDown,
+  StackOverflowTooManyAttempts,
+  StackOverflowInvalidParameter,
+  StackOverflowNeedAuthentication,
+  StackOverflowGeneralError,
 } StackOverflowErrorCodes;

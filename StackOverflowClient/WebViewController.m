@@ -30,14 +30,14 @@
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-  NSLog(@"%@", navigationAction.request.URL.description);
-//  navigationAction.request.URL
+
   if ([navigationAction.request.URL.path isEqualToString:@"/oauth/login_success"]) {
     NSString *fragmentString = navigationAction.request.URL.fragment;
     NSArray *components = [fragmentString componentsSeparatedByString:@"&"];
     NSString *fullTokenParameter = components.firstObject;
     NSString *token = [fullTokenParameter componentsSeparatedByString:@"="].lastObject;
-    
+    NSLog(@"%@", token);
+    [self dismissViewControllerAnimated:true completion:nil];
   }
   decisionHandler(WKNavigationActionPolicyAllow);
 }

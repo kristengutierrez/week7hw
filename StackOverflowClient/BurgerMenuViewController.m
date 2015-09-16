@@ -15,6 +15,8 @@
 CGFloat const kBurgerOpenScreenMultiplier = 0.2;
 CGFloat const kBurgerOpenScreenDivider = 3.0;
 NSTimeInterval const kTimeToSlideMenuOpen = 0.3;
+CGFloat const kBurgerButtonWidth = 50.0;
+CGFloat const kBurgerButtonHeight = 50.0;
 
 
 @interface BurgerMenuViewController () <UITableViewDelegate>
@@ -29,6 +31,15 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.3;
 - (void)viewDidLoad {
     [super viewDidLoad];
   
+  NSError *error;
+  NSString *path = [[NSBundle mainBundle] pathForResource:@"Test" ofType:@"json"];
+  NSData *data = [NSData dataWithContentsOfFile:path];
+  
+  id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+  if (error) {
+    NSLog(@"domain: %@ code: %ld", error.domain, (long)error.code);
+    NSError *myError = [NSError errorWithDomain:kStackOverflowErrorDomain code:StackOverflowBadJSON userInfo:nil];
+  }
   
   UITableViewController *mainMenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenu"];
   [self addChildViewController:mainMenuVC];
@@ -47,9 +58,15 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.3;
   
   MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestions"];
   self.viewControllers = @[questionSearchVC, myQuestionsVC];
+  UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kBurgerButtonWidth, kBurgerButtonHeight)];
+  [burgerButton setImage:[UIImage imageNamed:@"menu-alt-512"] forState:UIControlStateNormal];
+  [self.topViewController.view addSubview:burgerButton];
+  [burgerButton addTarget:self action:@selector(burgerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+  self.burgerButton = burgerButton;
   
-  
-  UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] init];
+  UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(topViewControllerPanned:)];
+  [self.topViewController.view addGestureRecognizer:pan];
+  self.pan = pan;
   
 }
 - (void)viewDidAppear:(BOOL)animated {
@@ -76,12 +93,12 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.3;
       } completion:^(BOOL finished) {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseMenu:)];
         [self.topViewController.view addGestureRecognizer:tap];
+        self.burgerButton.userInteractionEnabled = false;
       }];
     } else {
       [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
         self.topViewController.view.center = CGPointMake(self.view.center.x, self.topViewController.view.center.y);
       } completion:^(BOOL finished) {
-        self.burgerButton.userInteractionEnabled = true;
       }];
     }
   }
@@ -92,7 +109,7 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.3;
   } completion:^(BOOL finished) {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseMenu:)];
     [self.topViewController.view addGestureRecognizer:tap];
-    self.burgerButton.userInteractionEnabled = false;
+    sender.userInteractionEnabled = false;
   }];
 
 }
@@ -135,7 +152,7 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.3;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   UIViewController *newVC = self.viewControllers[indexPath.row];
   if (![newVC isEqual:self.topViewController]) {
-    
+    [self switchToViewController:newVC];
   }
 }
 @end

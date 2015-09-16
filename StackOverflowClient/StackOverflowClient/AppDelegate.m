@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <AFNetworking/AFNetworking.h>
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
+  [[AFNetworkReachabilityManager sharedManager] startMonitoring];
   // Override point for customization after application launch.
   return YES;
 }

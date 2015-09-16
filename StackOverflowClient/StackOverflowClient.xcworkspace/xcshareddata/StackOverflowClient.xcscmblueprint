@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2B7CE3D5F7FE5FA3D93C44B602BF54062FDDB8B8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4D34A42FF0FE823D238B4435DCFCC09797AADCD4" : 0,
+    "2B7CE3D5F7FE5FA3D93C44B602BF54062FDDB8B8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6B981AC8-D4F0-457F-BBB0-8453D57572DE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4D34A42FF0FE823D238B4435DCFCC09797AADCD4" : "sea-d40-iOS\/",
+    "2B7CE3D5F7FE5FA3D93C44B602BF54062FDDB8B8" : "week7HW"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "StackOverflowClient",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "StackOverflowClient\/StackOverflowClient.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kristenkozmary\/week7hw.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B7CE3D5F7FE5FA3D93C44B602BF54062FDDB8B8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/codefellows\/sea-d40-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4D34A42FF0FE823D238B4435DCFCC09797AADCD4"
+    }
+  ]
+}
