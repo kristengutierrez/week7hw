@@ -36,6 +36,9 @@
     NSArray *components = [fragmentString componentsSeparatedByString:@"&"];
     NSString *fullTokenParameter = components.firstObject;
     NSString *token = [fullTokenParameter componentsSeparatedByString:@"="].lastObject;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:token forKey:@"token"];
+    [defaults synchronize];
     NSLog(@"%@", token);
     [self dismissViewControllerAnimated:true completion:nil];
   }

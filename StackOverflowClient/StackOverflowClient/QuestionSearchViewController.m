@@ -10,19 +10,22 @@
 #import "StackOverflowService.h"
 #import "Question.h"
 
-@interface QuestionSearchViewController () <UISearchBarDelegate>
+@interface QuestionSearchViewController () <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSArray *questions;
+//@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @end
 
 @implementation QuestionSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+  _searchBar.delegate = self;
   [self searchBarSearchButtonClicked:nil];
 }
 
 #pragma mark - UISearchBarDelegate
+
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
   [StackOverflowService questionsForSearchTerm:searchBar.text completionHandler:^(NSArray *results, NSError *error) {
     if (error) {
@@ -61,5 +64,17 @@
     }
   }];
 }
-
+#pragma mark - UITableViewDataSource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+  }
+  cell.textLabel.text = self.questions[indexPath.row];
+  return cell;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return self.questions.count;
+}
 @end

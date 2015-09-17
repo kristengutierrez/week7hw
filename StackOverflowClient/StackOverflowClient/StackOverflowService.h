@@ -10,4 +10,5 @@
 
 @interface StackOverflowService : NSObject
 + (void)questionsForSearchTerm:(NSString *)searchTerm completionHandler:(void(^)(NSArray *, NSError*))completionHandler;
+@property (strong, nonatomic) NSString *term;
 @end

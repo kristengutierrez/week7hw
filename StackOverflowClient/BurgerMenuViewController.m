@@ -11,9 +11,11 @@
 #import "MyQuestionsViewController.h"
 #import "WebViewController.h"
 #import "Errors.h"
+#import "MenuTableViewController.h"
+#import "ProfileViewController.h"
 
-CGFloat const kBurgerOpenScreenMultiplier = 0.2;
 CGFloat const kBurgerOpenScreenDivider = 3.0;
+CGFloat const kBurgerOpenScreenMultiplier = 2.0;
 NSTimeInterval const kTimeToSlideMenuOpen = 0.3;
 CGFloat const kBurgerButtonWidth = 50.0;
 CGFloat const kBurgerButtonHeight = 50.0;
@@ -24,6 +26,8 @@ CGFloat const kBurgerButtonHeight = 50.0;
 @property (strong, nonatomic) UIButton *burgerButton;
 @property (strong, nonatomic) NSArray *viewControllers;
 @property (strong, nonatomic) UIPanGestureRecognizer *pan;
+@property (strong, nonatomic) MenuTableViewController *menuVC;
+@property (strong, nonatomic) ProfileViewController *profileViewController;
 @end
 
 @implementation BurgerMenuViewController
@@ -41,13 +45,14 @@ CGFloat const kBurgerButtonHeight = 50.0;
     NSError *myError = [NSError errorWithDomain:kStackOverflowErrorDomain code:StackOverflowBadJSON userInfo:nil];
   }
   
-  UITableViewController *mainMenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenu"];
+  MenuTableViewController *mainMenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenu"];
   [self addChildViewController:mainMenuVC];
   mainMenuVC.tableView.delegate = self;
   mainMenuVC.view.frame = self.view.frame;
+  [mainMenuVC setValue:@"Menu" forKey:@"title"];
   [self.view addSubview:mainMenuVC.view];
   [mainMenuVC didMoveToParentViewController:self];
-  
+  self.menuVC = mainMenuVC;
   QuestionSearchViewController *questionSearchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionSearch"];
   [self addChildViewController:questionSearchVC];
   questionSearchVC.view.frame = self.view.frame;
@@ -57,8 +62,16 @@ CGFloat const kBurgerButtonHeight = 50.0;
   self.topViewController = questionSearchVC;
   
   MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestions"];
-  self.viewControllers = @[questionSearchVC, myQuestionsVC];
-  UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kBurgerButtonWidth, kBurgerButtonHeight)];
+
+//  [self addChildViewController:myQuestionsVC];
+//  myQuestionsVC.view.frame = self.view.frame;
+//  [self.view addSubview:myQuestionsVC.view];
+//  [myQuestionsVC didMoveToParentViewController:self];
+  UIStoryboard *profileStoryboard = [UIStoryboard storyboardWithName:@"ProfileStoryboard" bundle:[NSBundle mainBundle]];
+  ProfileViewController *profileVC = [profileStoryboard instantiateViewControllerWithIdentifier:@"ProfileStoryboard"];
+  self.profileViewController = profileVC;
+    self.viewControllers = @[questionSearchVC, myQuestionsVC, profileVC];
+  UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 12, kBurgerButtonWidth, kBurgerButtonHeight)];
   [burgerButton setImage:[UIImage imageNamed:@"menu-alt-512"] forState:UIControlStateNormal];
   [self.topViewController.view addSubview:burgerButton];
   [burgerButton addTarget:self action:@selector(burgerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -72,33 +85,47 @@ CGFloat const kBurgerButtonHeight = 50.0;
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
   WebViewController *webVC = [[WebViewController alloc] init];
-  [self presentViewController:webVC animated:true completion:nil];
+      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//  [defaults stringForKey:@"token"];
+  NSString *token = [defaults stringForKey:@"token"];
+  if (token) {
+    
+  } else {
+    [self presentViewController:webVC animated:true completion:nil];
+  }
 }
 
 
-- (void)topViewControllerPanned:(UIPanGestureRecognizer *)sender {
+-(void)topViewControllerPanned:(UIPanGestureRecognizer *)sender {
+  
   CGPoint velocity = [sender velocityInView:self.topViewController.view];
   CGPoint translation = [sender translationInView:self.topViewController.view];
+  
   if (sender.state == UIGestureRecognizerStateChanged) {
     if (velocity.x > 0) {
       self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translation.x, self.topViewController.view.center.y);
       [sender setTranslation:CGPointZero inView:self.topViewController.view];
     }
   }
+  
   if (sender.state == UIGestureRecognizerStateEnded) {
     if (self.topViewController.view.frame.origin.x > self.topViewController.view.frame.size.width / kBurgerOpenScreenDivider) {
-      NSLog(@"User is opening menu");
+      NSLog(@"user is opening menu");
+      
       [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
         self.topViewController.view.center = CGPointMake(self.view.center.x * kBurgerOpenScreenMultiplier, self.topViewController.view.center.y);
       } completion:^(BOOL finished) {
+        
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseMenu:)];
         [self.topViewController.view addGestureRecognizer:tap];
         self.burgerButton.userInteractionEnabled = false;
+        
       }];
     } else {
       [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
         self.topViewController.view.center = CGPointMake(self.view.center.x, self.topViewController.view.center.y);
       } completion:^(BOOL finished) {
+        
       }];
     }
   }

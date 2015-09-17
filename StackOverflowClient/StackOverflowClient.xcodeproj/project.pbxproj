@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1718D91C1BAB1D960005B4B2 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1718D91B1BAB1D960005B4B2 /* ProfileStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
 		171D61E81BA766C9000E3CD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D61E71BA766C9000E3CD8 /* main.m */; };
 		171D61EB1BA766C9000E3CD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D61EA1BA766C9000E3CD8 /* AppDelegate.m */; };
 		171D61EE1BA766C9000E3CD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D61ED1BA766C9000E3CD8 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 		171D62131BA773F0000E3CD8 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */; };
 		171D62161BA77BB5000E3CD8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62151BA77BB5000E3CD8 /* WebViewController.m */; };
 		171D62191BA78781000E3CD8 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62181BA78781000E3CD8 /* Errors.m */; };
+		1731C2FC1BAA0A0400474D8E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1731C2FB1BAA0A0400474D8E /* ProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1731C2FF1BAA25A300474D8E /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1731C2FE1BAA25A300474D8E /* MenuTableViewController.m */; };
 		1733F1B41BA8C3F50068BBF2 /* StackOverflowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */; };
 		1733F1B71BA8C9E60068BBF2 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1733F1B61BA8C9E60068BBF2 /* QuestionSearchViewController.m */; };
 		1733F1BA1BA9D5AA0068BBF2 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1733F1B91BA9D5AA0068BBF2 /* Question.m */; };
@@ -38,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		05C7D102BBD853EB16FB7823 /* Pods-StackOverflowClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-StackOverflowClient/Pods-StackOverflowClient.release.xcconfig"; sourceTree = "<group>"; };
+		1718D91B1BAB1D960005B4B2 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		171D61E21BA766C9000E3CD8 /* StackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		171D61E61BA766C9000E3CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171D61E71BA766C9000E3CD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +63,10 @@
 		171D62151BA77BB5000E3CD8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		171D62171BA78781000E3CD8 /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Errors.h; path = ../Errors.h; sourceTree = "<group>"; };
 		171D62181BA78781000E3CD8 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Errors.m; path = ../Errors.m; sourceTree = "<group>"; };
+		1731C2FA1BAA0A0400474D8E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
+		1731C2FB1BAA0A0400474D8E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		1731C2FD1BAA25A300474D8E /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		1731C2FE1BAA25A300474D8E /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		1733F1B21BA8C3F50068BBF2 /* StackOverflowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowService.h; sourceTree = "<group>"; };
 		1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowService.m; sourceTree = "<group>"; };
 		1733F1B51BA8C9E60068BBF2 /* QuestionSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSearchViewController.h; sourceTree = "<group>"; };
@@ -114,28 +122,23 @@
 		171D61E41BA766C9000E3CD8 /* StackOverflowClient */ = {
 			isa = PBXGroup;
 			children = (
+				1731C3021BAA274B00474D8E /* Model */,
+				1731C3011BAA274400474D8E /* View */,
+				1731C3001BAA273C00474D8E /* Controller */,
 				171D620B1BA766D9000E3CD8 /* BurgerMenuViewController.h */,
 				171D620C1BA766D9000E3CD8 /* BurgerMenuViewController.m */,
-				171D62171BA78781000E3CD8 /* Errors.h */,
-				171D62181BA78781000E3CD8 /* Errors.m */,
-				17AD252B1BA9D88C00E2A2C1 /* Test.json */,
+				1731C2FA1BAA0A0400474D8E /* ProfileViewController.h */,
+				1731C2FB1BAA0A0400474D8E /* ProfileViewController.m */,
 				171D62141BA77BB5000E3CD8 /* WebViewController.h */,
 				171D62151BA77BB5000E3CD8 /* WebViewController.m */,
-				1733F1B21BA8C3F50068BBF2 /* StackOverflowService.h */,
-				1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */,
-				1733F1B81BA9D5AA0068BBF2 /* Question.h */,
-				1733F1B91BA9D5AA0068BBF2 /* Question.m */,
-				1733F1BB1BA9D5F40068BBF2 /* QuestionJSONParser.h */,
-				1733F1BC1BA9D5F40068BBF2 /* QuestionJSONParser.m */,
 				1733F1B51BA8C9E60068BBF2 /* QuestionSearchViewController.h */,
 				1733F1B61BA8C9E60068BBF2 /* QuestionSearchViewController.m */,
+				1731C2FD1BAA25A300474D8E /* MenuTableViewController.h */,
+				1731C2FE1BAA25A300474D8E /* MenuTableViewController.m */,
 				171D62111BA773F0000E3CD8 /* MyQuestionsViewController.h */,
 				171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */,
-				171D61E91BA766C9000E3CD8 /* AppDelegate.h */,
-				171D61EA1BA766C9000E3CD8 /* AppDelegate.m */,
 				171D61EC1BA766C9000E3CD8 /* ViewController.h */,
 				171D61ED1BA766C9000E3CD8 /* ViewController.m */,
-				171D61EF1BA766C9000E3CD8 /* Main.storyboard */,
 				171D61F21BA766C9000E3CD8 /* Images.xcassets */,
 				171D61F41BA766C9000E3CD8 /* LaunchScreen.xib */,
 				171D61E51BA766C9000E3CD8 /* Supporting Files */,
@@ -167,6 +170,40 @@
 				171D62001BA766C9000E3CD8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1731C3001BAA273C00474D8E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1731C3011BAA274400474D8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				171D61EF1BA766C9000E3CD8 /* Main.storyboard */,
+				1718D91B1BAB1D960005B4B2 /* ProfileStoryboard.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1731C3021BAA274B00474D8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				171D61E91BA766C9000E3CD8 /* AppDelegate.h */,
+				171D61EA1BA766C9000E3CD8 /* AppDelegate.m */,
+				171D62171BA78781000E3CD8 /* Errors.h */,
+				171D62181BA78781000E3CD8 /* Errors.m */,
+				1733F1B81BA9D5AA0068BBF2 /* Question.h */,
+				1733F1B91BA9D5AA0068BBF2 /* Question.m */,
+				1733F1B21BA8C3F50068BBF2 /* StackOverflowService.h */,
+				1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */,
+				1733F1BB1BA9D5F40068BBF2 /* QuestionJSONParser.h */,
+				1733F1BC1BA9D5F40068BBF2 /* QuestionJSONParser.m */,
+				17AD252B1BA9D88C00E2A2C1 /* Test.json */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		4664C6BE027AC8063CC83287 /* Pods */ = {
@@ -272,6 +309,7 @@
 				17AD252C1BA9D88C00E2A2C1 /* Test.json in Resources */,
 				171D61F61BA766C9000E3CD8 /* LaunchScreen.xib in Resources */,
 				171D61F31BA766C9000E3CD8 /* Images.xcassets in Resources */,
+				1718D91C1BAB1D960005B4B2 /* ProfileStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +368,10 @@
 				171D62131BA773F0000E3CD8 /* MyQuestionsViewController.m in Sources */,
 				171D61EB1BA766C9000E3CD8 /* AppDelegate.m in Sources */,
 				171D61E81BA766C9000E3CD8 /* main.m in Sources */,
+				1731C2FF1BAA25A300474D8E /* MenuTableViewController.m in Sources */,
 				1733F1BA1BA9D5AA0068BBF2 /* Question.m in Sources */,
 				1733F1B71BA8C9E60068BBF2 /* QuestionSearchViewController.m in Sources */,
+				1731C2FC1BAA0A0400474D8E /* ProfileViewController.m in Sources */,
 				1733F1B41BA8C3F50068BBF2 /* StackOverflowService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +501,7 @@
 			baseConfigurationReference = 8AFA2096853F42527E162E46 /* Pods-StackOverflowClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = StackOverflowClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,6 +513,7 @@
 			baseConfigurationReference = 05C7D102BBD853EB16FB7823 /* Pods-StackOverflowClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = StackOverflowClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

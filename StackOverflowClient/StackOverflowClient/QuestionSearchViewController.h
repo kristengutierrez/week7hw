@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface QuestionSearchViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+//@property (strong, nonatomic) UISearchBar *searchBar;
 @end

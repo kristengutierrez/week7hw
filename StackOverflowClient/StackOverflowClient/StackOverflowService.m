@@ -11,12 +11,14 @@
 #import "Errors.h"
 #import "Question.h"
 #import "QuestionJSONParser.h"
+#import "QuestionSearchViewController.h"
 
 
 @implementation StackOverflowService
 
 + (void)questionsForSearchTerm:(NSString *)searchTerm completionHandler:(void(^)(NSArray *, NSError*))completionHandler {
-  NSString *url = @"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=swift&site=stackoverflow";
+  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow",searchTerm];
+//   *url = @"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow", searchTerm];
   
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   
