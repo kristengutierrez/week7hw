@@ -36,7 +36,9 @@
     NSArray *components = [fragmentString componentsSeparatedByString:@"&"];
     NSString *fullTokenParameter = components.firstObject;
     NSString *token = [fullTokenParameter componentsSeparatedByString:@"="].lastObject;
+    NSString *key = @"8XW945CZg8n1i6FYoBbeeQ((";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:key forKey:@"key"];
     [defaults setObject:token forKey:@"token"];
     [defaults synchronize];
     NSLog(@"%@", token);

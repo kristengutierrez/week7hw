@@ -17,14 +17,16 @@
 @implementation StackOverflowService
 
 + (void)questionsForSearchTerm:(NSString *)searchTerm completionHandler:(void(^)(NSArray *, NSError*))completionHandler {
-  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow",searchTerm];
-//   *url = @"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow", searchTerm];
-  
+    NSString *key = @"8XW945CZg8n1i6FYoBbeeQ((";
+  NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
+  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?key=%@&access_token=%@&order=desc&sort=activity&intitle=%@&site=stackoverflow", key, accessToken, searchTerm];
+  NSLog(@"%@", url);
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   
   [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
     
     NSArray *questions = [QuestionJSONParser questionsResultsFromJSON:responseObject];
+    NSLog(@"Questions array count: %lu", (unsigned long)questions.count);
     
     completionHandler(questions,nil);
     
@@ -62,6 +64,42 @@
       case 401:
       localizedDescription = @"You must sign in to access this feature";
       errorCode = StackOverflowNeedAuthentication;
+      break;
+    case 402:
+      localizedDescription = @"Invalid access token";
+      errorCode = StackOverflowInvalidAccessToken;
+      break;
+    case 403:
+      localizedDescription = @"Access denied";
+      errorCode = StackOverflowAccessDenied;
+      break;
+    case 404:
+      localizedDescription = @"Method does not exist";
+      errorCode = StackOverflowInvalidMethod;
+      break;
+    case 405:
+      localizedDescription = @"Key required";
+      errorCode = StackOverflowKeyRequired;
+      break;
+    case 406:
+      localizedDescription = @"Access token compromised";
+      errorCode = StackOverflowAccessTokenCompromised;
+      break;
+    case 407:
+      localizedDescription = @"Write operation rejected";
+      errorCode = StackOverflowWriteOperationDenied;
+      break;
+    case 409:
+      localizedDescription = @"Request has already been run";
+      errorCode = StackOverflowDuplicateRequest;
+      break;
+    case 500:
+      localizedDescription = @"Unexpected internal error, try again later";
+      errorCode = StackOverflowInternalError;
+      break;
+    case 503:
+      localizedDescription = @"Temporarily unavailable, try again later";
+      errorCode = StackOverflowTemporarilyUnavailable;
       break;
     default:
       localizedDescription = @"Something went wrong";

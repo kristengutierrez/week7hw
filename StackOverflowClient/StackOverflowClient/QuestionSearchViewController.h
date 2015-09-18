@@ -10,5 +10,6 @@
 
 @interface QuestionSearchViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) UITapGestureRecognizer *tapRecognizer;
 //@property (strong, nonatomic) UISearchBar *searchBar;
 @end

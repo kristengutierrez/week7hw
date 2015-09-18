@@ -16,4 +16,13 @@ typedef enum : NSUInteger {
   StackOverflowInvalidParameter,
   StackOverflowNeedAuthentication,
   StackOverflowGeneralError,
+  StackOverflowInvalidAccessToken,
+  StackOverflowAccessDenied,
+  StackOverflowInvalidMethod,
+  StackOverflowKeyRequired,
+  StackOverflowAccessTokenCompromised,
+  StackOverflowWriteOperationDenied,
+  StackOverflowDuplicateRequest,
+  StackOverflowInternalError,
+  StackOverflowTemporarilyUnavailable,
 } StackOverflowErrorCodes;

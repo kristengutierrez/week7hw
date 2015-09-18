@@ -19,6 +19,7 @@
 		171D62131BA773F0000E3CD8 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62121BA773F0000E3CD8 /* MyQuestionsViewController.m */; };
 		171D62161BA77BB5000E3CD8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62151BA77BB5000E3CD8 /* WebViewController.m */; };
 		171D62191BA78781000E3CD8 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 171D62181BA78781000E3CD8 /* Errors.m */; };
+		172D29DE1BAB488000120637 /* ImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 172D29DD1BAB488000120637 /* ImageService.m */; settings = {ASSET_TAGS = (); }; };
 		1731C2FC1BAA0A0400474D8E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1731C2FB1BAA0A0400474D8E /* ProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1731C2FF1BAA25A300474D8E /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1731C2FE1BAA25A300474D8E /* MenuTableViewController.m */; };
 		1733F1B41BA8C3F50068BBF2 /* StackOverflowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */; };
@@ -63,6 +64,8 @@
 		171D62151BA77BB5000E3CD8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		171D62171BA78781000E3CD8 /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Errors.h; path = ../Errors.h; sourceTree = "<group>"; };
 		171D62181BA78781000E3CD8 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Errors.m; path = ../Errors.m; sourceTree = "<group>"; };
+		172D29DC1BAB488000120637 /* ImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageService.h; sourceTree = "<group>"; };
+		172D29DD1BAB488000120637 /* ImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageService.m; sourceTree = "<group>"; };
 		1731C2FA1BAA0A0400474D8E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
 		1731C2FB1BAA0A0400474D8E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
 		1731C2FD1BAA25A300474D8E /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				1733F1B31BA8C3F50068BBF2 /* StackOverflowService.m */,
 				1733F1BB1BA9D5F40068BBF2 /* QuestionJSONParser.h */,
 				1733F1BC1BA9D5F40068BBF2 /* QuestionJSONParser.m */,
+				172D29DC1BAB488000120637 /* ImageService.h */,
+				172D29DD1BAB488000120637 /* ImageService.m */,
 				17AD252B1BA9D88C00E2A2C1 /* Test.json */,
 			);
 			name = Model;
@@ -269,7 +274,7 @@
 		171D61DA1BA766C9000E3CD8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = koz;
 				TargetAttributes = {
 					171D61E11BA766C9000E3CD8 = {
@@ -369,6 +374,7 @@
 				171D61EB1BA766C9000E3CD8 /* AppDelegate.m in Sources */,
 				171D61E81BA766C9000E3CD8 /* main.m in Sources */,
 				1731C2FF1BAA25A300474D8E /* MenuTableViewController.m in Sources */,
+				172D29DE1BAB488000120637 /* ImageService.m in Sources */,
 				1733F1BA1BA9D5AA0068BBF2 /* Question.m in Sources */,
 				1733F1B71BA8C9E60068BBF2 /* QuestionSearchViewController.m in Sources */,
 				1731C2FC1BAA0A0400474D8E /* ProfileViewController.m in Sources */,
@@ -435,6 +441,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -504,6 +511,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = StackOverflowClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -516,6 +524,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = StackOverflowClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -534,6 +543,7 @@
 				);
 				INFOPLIST_FILE = StackOverflowClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackOverflowClient.app/StackOverflowClient";
 			};
@@ -549,6 +559,7 @@
 				);
 				INFOPLIST_FILE = StackOverflowClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackOverflowClient.app/StackOverflowClient";
 			};

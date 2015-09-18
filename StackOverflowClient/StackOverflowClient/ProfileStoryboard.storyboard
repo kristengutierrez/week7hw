@@ -30,14 +30,22 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-yD-LyB">
-                                <rect key="frame" x="255.5" y="205" width="89" height="24"/>
+                                <rect key="frame" x="255" y="205" width="89" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D5-Nm-p8L">
+                                <rect key="frame" x="267" y="245" width="67" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0D5-Nm-p8L" firstAttribute="top" secondItem="bkA-yD-LyB" secondAttribute="bottom" constant="16" id="WWt-Wt-k0f"/>
+                            <constraint firstItem="0D5-Nm-p8L" firstAttribute="centerX" secondItem="g7H-qT-4Z9" secondAttribute="centerX" id="YO3-tf-O9S"/>
                             <constraint firstItem="9HZ-Xj-SDK" firstAttribute="top" secondItem="HF6-hn-PeA" secondAttribute="bottom" constant="21" id="owy-UH-9xM"/>
                             <constraint firstItem="bkA-yD-LyB" firstAttribute="top" secondItem="9HZ-Xj-SDK" secondAttribute="bottom" constant="19" id="sLe-rQ-k6n"/>
                             <constraint firstItem="bkA-yD-LyB" firstAttribute="centerX" secondItem="g7H-qT-4Z9" secondAttribute="centerX" id="ujO-pr-hwA"/>
