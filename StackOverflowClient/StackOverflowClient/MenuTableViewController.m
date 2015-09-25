@@ -8,7 +8,7 @@
 
 #import "MenuTableViewController.h"
 
-@interface MenuTableViewController ()
+@interface MenuTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  self.tableView.delegate = self;
+  self.tableView.dataSource = self;
     // Do any additional setup after loading the view.
 }
 
@@ -33,18 +35,18 @@
     // Pass the selected object to the new view controller.
 }
 */
-//#pragma mark - UITableViewDataSource
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-//  if (cell == nil) {
-//    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//  }
-////  cell.textLabel.text = self.questions[indexPath.row];
-//  return cell;
-//}
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//  return 3;
-//}
+#pragma mark - UITableViewDataSource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+  }
+//  cell.textLabel.text = self.questions[indexPath.row];
+  return cell;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return 3;
+}
 
 @end
